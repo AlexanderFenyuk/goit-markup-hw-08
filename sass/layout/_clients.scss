@@ -1,0 +1,86 @@
+/* Студия - Секция Постоянные клиенты */
+.clients {
+  width: 1170px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-clients {
+  max-width: 1700px;
+  height: 182px;
+}
+
+.header-client {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color-text);
+}
+
+.list-client-icon {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  margin-top: 50px;
+}
+
+.item-client-icon {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+/* Студия - Постоянные клиенты + иконки ссылки - стили при ховере-фокусе */
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  color: var(--icon-link-color);
+  border: 1px solid;
+  border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.logo-1 {
+  width: 45px;
+  height: 50px;
+  fill: currentColor;
+}
+.logo-2 {
+  width: 40px;
+  height: 52px;
+  fill: currentColor;
+}
+.logo-3 {
+  width: 41px;
+  height: 43px;
+  fill: currentColor;
+}
+.logo-4 {
+  width: 80px;
+  height: 42px;
+  fill: currentColor;
+}
+.logo-5 {
+  width: 59px;
+  height: 47px;
+  fill: currentColor;
+}
+.logo-6 {
+  width: 89px;
+  height: 46px;
+  fill: currentColor;
+}

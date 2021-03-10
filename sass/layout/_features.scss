@@ -1,0 +1,54 @@
+/* Студия - Секция Особенности */
+.features {
+  padding-top: 94px;
+}
+.features-list {
+  display: flex;
+}
+
+.indent {
+  margin-right: 30px;
+}
+
+.features-item {
+  width: 270px;
+  padding: 0px;
+}
+
+.features-item-head {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--main-color-text);
+  text-transform: uppercase;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.features-item-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--second-color-text);
+
+  margin-top: 10px;
+  padding: 0px;
+}
+
+.features-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+
+.features-icon {
+  width: 70px;
+}

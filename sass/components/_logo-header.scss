@@ -1,0 +1,27 @@
+/* == ОБЩЕЕ == контейнер для логотипа */
+.container-logo {
+  display: inline-block;
+  min-width: 145px;
+  margin-right: 93px;
+  text-align: center;
+}
+
+/* логотип web */
+.header-logo-web {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: var(--accent-color);
+}
+
+/* логотип studio */
+.header-logo-studio {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}

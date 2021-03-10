@@ -1,0 +1,664 @@
+@charset "UTF-8";
+* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*Шрифты*/
+  --maine-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+  /* == Общее == - использует logo; hover; focus; hero-bottom */
+  --accent-color: #2196f3;
+  --main-color-text: #212121;
+  --second-color-text: #757575;
+  --separatory-line: #ececec;
+  --social-icon: #afb1b8;
+  --icon-link-color: #afb1b8;
+  --close-color: rgba(0, 0, 0, 0.1);
+  /* Студия - Hero */
+  --hero-background-color: #c4c4c4;
+  --hero-text-color: #fff;
+  --hero-button-text-color: #ffffff;
+  /* Студия - Модальное окно */
+  --backdrop-color: rgba(0, 0, 0, 0.5);
+  --portfolio-button-bgcolor-active: #2196f3;
+  /* Студия - Форма модального окна*/
+  --text-lable: #757575;
+  --modal-form-input-border-color: rgba(33, 33, 33, 0.2);
+  --commits-placeholder: rgba(117, 117, 117, 0.5);
+  --input-icon-color: #212121;
+  --input-focus-icon-color: #2196f3;
+  --checkbox-border: #212121;
+  --modal--button-hover: #188ce8;
+  /* Студия - наша команда*/
+  --social-ico-acent: #fff;
+  /* Подвал */
+  --footer-bgcolor: #2f303a;
+  --logo-text-color: #fff;
+  --footer-text-color: #ffffff;
+  --footer-address-contact: rgba(255, 255, 255, 0.6);
+  --logo-text-color-10p: rgba(255, 255, 255, 0.1);
+  --subscribe-button-color: #2196f3;
+  --subscribe-button-text: #fff;
+  --button-shadow-box: rgba(0, 0, 0, 0.15);
+  --input-border: rgba(255, 255, 255, 0.3);
+  --footer-input-user-text: #fff;
+  /* Портфолио - Карточка портфолио */
+  --portfolio-button-text-active-color: #fff;
+  --thumb-text-color: #fff;
+  --thumb-background-color: rgba(33, 150, 243, 0.9);
+}
+
+/* скрываем заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.address {
+  font-style: normal;
+}
+
+/* убираем подчёркивание с ссылок */
+a {
+  text-decoration: none;
+}
+
+/* убираем точки из списков */
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* == ОБЩЕЕ == контейнер для логотипа */
+.container-logo {
+  display: inline-block;
+  min-width: 145px;
+  margin-right: 93px;
+  text-align: center;
+}
+
+/* логотип web */
+.header-logo-web {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: var(--accent-color);
+}
+
+/* логотип studio */
+.header-logo-studio {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}
+
+/* == ОБЩЕЕ == Хедер контейнер размер */
+.header {
+  border-bottom: 1px solid var(--separatory-line);
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* == ОБЩЕЕ == ссылка на email в хедере */
+.header-email-link {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--second-color-text);
+  margin-right: 30px;
+}
+
+.header-email-link:hover, .header-email-link:focus {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-tel-link {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--second-color-text);
+}
+
+.header-tel-link:hover, .header-tel-link:focus {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* == ОБЩЕЕ == Хедер - иконки mail и tel  */
+.ico-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.ico-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+  text-align: center;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - навигация */
+.navigation {
+  font-family: var(--maine-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--main-color-text);
+  width: 294px;
+  display: block;
+  margin-right: 305px;
+}
+
+.navigation-list {
+  list-style: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  padding-left: 0;
+  display: flex;
+}
+
+.navigation-list-item {
+  position: relative;
+  padding: 32px 0 32px 0;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - фокус текущей страницы */
+.accent {
+  color: var(--accent-color);
+}
+
+.accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(1px);
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - нижняя линия при hover и focus ссылки*/
+.navigation-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(1px) scaleX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.navigation-link:hover::after, .navigation-link:focus::after {
+  transform: translateY(1px) scaleX(1);
+}
+
+.navigation-link:hover, .navigation-link:focus {
+  color: var(--accent-color);
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - Ссылки навигации*/
+.header-navigation-list-link,
+.projects-navigation-list-link {
+  text-decoration: none;
+  color: var(--main-color-text);
+  display: block;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - НАВИГАЦИЯ стили ссылки при ховере */
+.header-navigation-list-link:hover, .header-navigation-list-link:focus {
+  color: var(--accent-color);
+}
+
+/* = ОБЩЕЕ Хедер ==  Студия и ПОРТФОЛИО подсветка ссылки текущей страницы */
+.curentpage {
+  color: var(--accent-color);
+}
+
+/*========== ПОРТФОЛИО ==============*/
+.portfolio-section {
+  box-sizing: border-box;
+  /* width: 1170px; */
+  min-height: 1360px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-navigation-list {
+  display: flex;
+  /* width: 611px;
+  height: 54px; */
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 50px;
+  /*16+34 */
+}
+
+/* Портфолио - кнопки (фильтр)  */
+.pbtn {
+  font-family: var(--maine-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  color: var(--main-color-text);
+  background-color: #f5f4fa;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  /* Портфолио - стили кнопок при ховере меняют цвет */
+}
+
+.pbtn:hover, .pbtn:focus {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #fff;
+  /* outline: none; */
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.all {
+  width: 78px;
+}
+
+.web-site {
+  min-width: 128px;
+}
+
+.application {
+  width: 145px;
+}
+
+.design {
+  width: 103px;
+}
+
+.marketing {
+  width: 130px;
+}
+
+.pbutton {
+  margin-right: 8px;
+  min-height: 38px;
+  cursor: pointer;
+}
+
+/* ПОРТФОЛИО - Проэкты карточки выстраиваем в несколько строк */
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.projects-section li {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  /* border: 1px solid #eeeeee; */
+  outline: 1px solid #eeeeee;
+}
+
+.container-projects {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+}
+
+/* ПОРТФОЛИО - стили ссылки при ховере карточки-проэкты */
+/* ПОРТФОЛИО - тень на карточке при ховере и фокусе */
+.projects-navigation-list-link:hover, .projects-navigation-list-link:focus {
+  /* outline: none; */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  /*ПОРТФОЛИО - оверлей по ховеру*/
+}
+
+.projects-navigation-list-link:hover .thumb, .projects-navigation-list-link:focus .thumb {
+  transform: translateY(0);
+  width: 100%;
+  height: 100%;
+}
+
+/* ПОРТФОЛИО - синий оверлей с текстом поверх изображения выезжает снизу изображения */
+/* ПОРТФОЛИО - скрытие оверлея*/
+.project-card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ПОРТФОЛИО - оверлей */
+.thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: var(--thumb-text-color);
+  background-color: var(--thumb-background-color);
+  padding: 63px 24px;
+  cursor: default;
+  /* overflow: scroll; */
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ПОРТФОЛИО list*/
+.portfolio-card-head {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--main-color-text);
+}
+
+.portfolio-card-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--second-color-text);
+}
+
+/*   Подвал    */
+.footer {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-logo-web {
+  color: var(--accent-color);
+}
+
+.footer-logo-studio {
+  color: var(--footer-text-color);
+}
+
+.footer-address-list {
+  list-style: none;
+  margin-top: 20px;
+  /* width: 231px; */
+}
+
+.footer-address-location-link {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--footer-text-color);
+}
+
+.footer-address-contact-link {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--footer-text-color);
+  opacity: 0.6;
+}
+
+.address {
+  font-style: normal;
+}
+
+.contaсt-navigation {
+  margin-right: 70px;
+  width: 231px;
+}
+
+.flex {
+  display: flex;
+}
+
+.social {
+  /* display: block; */
+  padding-top: 12px;
+}
+
+.slogan {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.connect-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.connect-item {
+  margin-right: 10px;
+}
+
+/* == ОБЩЕЕ == Подвал - акцент ссылок - иконки соц. сетей */
+.connect-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--logo-text-color-10p);
+  color: var(--logo-text-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.connect-link:hover, .connect-link:focus {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+/* Подвал иконка соц. сетей */
+.connect-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Подвал - Подпишитесь на рассылку  - форма для подписания */
+.subscribe {
+  width: 570px;
+  height: 86px;
+  padding-top: 12px;
+  margin-left: 93px;
+  /* margin: 72px 0 94px 93px; */
+}
+
+/* Подвал - Подпишитесь на рассылку */
+.subscribe-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-text-color);
+  /*outline: 1px solid orange;*/
+}
+
+/* Подвал - форма заполнения */
+.subscribe-form {
+  display: flex;
+}
+
+/* Подвал - кнопка отправить */
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 12px;
+  padding-left: 29px;
+  padding-right: 28px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--subscribe-button-color);
+  box-shadow: 0px 4px 4px var(--button-shadow-box);
+}
+
+.subscribe-button:focus {
+  outline: 2px solid black;
+}
+
+/* Подвал - поле заполнения */
+.footer-input {
+  width: 358px;
+  height: 50px;
+  margin-top: 20px;
+  padding-left: 16px;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--footer-input-user-text);
+}
+
+/* Подвал - надпись на кнопке "Подписаться" */
+.subscribe-button-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  /* identical to box height, or 187% */
+  letter-spacing: 0.06em;
+  color: var(--subscribe-button-text);
+}
+
+/* Подвал - иконка для кнопки "Подписаться"*/
+.subscribe-button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  /* fill: #fff; */
+}
+/*# sourceMappingURL=portfolio.css.map */

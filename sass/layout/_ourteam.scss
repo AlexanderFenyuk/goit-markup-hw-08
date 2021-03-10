@@ -1,0 +1,107 @@
+/* Студия - Секция Наша команда head*/
+.ourteam {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.ourteam-head {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: var(--main-color-text);
+}
+.ourteam-list {
+  display: flex;
+  margin-top: 50px;
+}
+.container-item {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 428px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Студия - Наша команда list h3 */
+.ourteam-card-head {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--main-color-text);
+}
+
+/* .ourteam-img {
+  display: flex;
+  flex-direction: column-reverse;
+} */
+
+.ourteam-card-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--second-color-text);
+  margin-top: 10px;
+}
+/* Студия - Наша команда container */
+.container-ourteam {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+/* Студия - Наша команда SVG */
+.card-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  height: 44px;
+  margin: 0 auto 0 auto;
+}
+.item-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  margin-right: 10px;
+}
+
+/*  Студия - Наша Команда - ссылка иконок карточки*/
+.social-icon {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  color: var(--social-icon);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Студия - Наша Команда - акцент ссылок - иконки соц. сетей */
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: var(--social-ico-acent);
+    /* outline: none; */
+  }
+}
+
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

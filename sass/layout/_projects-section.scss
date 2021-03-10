@@ -1,0 +1,87 @@
+/* ПОРТФОЛИО - Проэкты карточки выстраиваем в несколько строк */
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+
+  & li {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid #eeeeee; */
+    outline: 1px solid #eeeeee;
+  }
+}
+
+.container-projects {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+}
+
+/* ПОРТФОЛИО - стили ссылки при ховере карточки-проэкты */
+
+/* ПОРТФОЛИО - тень на карточке при ховере и фокусе */
+.projects-navigation-list-link {
+  &:hover,
+  &:focus {
+    /* outline: none; */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    /*ПОРТФОЛИО - оверлей по ховеру*/
+    & .thumb {
+      transform: translateY(0);
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* ПОРТФОЛИО - синий оверлей с текстом поверх изображения выезжает снизу изображения */
+
+/* ПОРТФОЛИО - скрытие оверлея*/
+.project-card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ПОРТФОЛИО - оверлей */
+.thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: var(--thumb-text-color);
+  background-color: var(--thumb-background-color);
+  padding: 63px 24px;
+  cursor: default;
+  /* overflow: scroll; */
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ПОРТФОЛИО list*/
+.portfolio-card-head {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--main-color-text);
+}
+.portfolio-card-text {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--second-color-text);
+}

@@ -1,0 +1,174 @@
+/* == ОБЩЕЕ == Хедер контейнер размер */
+.header {
+  border-bottom: 1px solid var(--separatory-line);
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  & .container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+}
+
+/* == ОБЩЕЕ == ссылка на email в хедере */
+.header-email-link {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--second-color-text);
+  margin-right: 30px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    font-family: var(--maine-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.header-tel-link {
+  text-decoration: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--second-color-text);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    font-family: var(--maine-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* == ОБЩЕЕ == Хедер - иконки mail и tel  */
+.ico-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.ico-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+  text-align: center;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - навигация */
+.navigation {
+  font-family: var(--maine-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--main-color-text);
+  width: 294px;
+
+  display: block;
+  margin-right: 305px;
+}
+
+.navigation-list {
+  list-style: none;
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+
+  padding-left: 0;
+  display: flex;
+}
+
+.navigation-list-item {
+  position: relative;
+  padding: 32px 0 32px 0;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - фокус текущей страницы */
+.accent {
+  color: var(--accent-color);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(1px);
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+  }
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - нижняя линия при hover и focus ссылки*/
+.navigation-link {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(1px) scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(1px) scaleX(1);
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - Ссылки навигации*/
+
+.header-navigation-list-link,
+.projects-navigation-list-link {
+  text-decoration: none;
+  color: var(--main-color-text);
+  display: block;
+}
+
+/* == ОБЩЕЕ Хедер == Студия и Портфолио - НАВИГАЦИЯ стили ссылки при ховере */
+.header-navigation-list-link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+/* = ОБЩЕЕ Хедер ==  Студия и ПОРТФОЛИО подсветка ссылки текущей страницы */
+.curentpage {
+  color: var(--accent-color);
+}

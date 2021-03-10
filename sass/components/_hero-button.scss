@@ -1,0 +1,24 @@
+/* Студия - кнопка для  hero - главная страница  */
+.hero-button {
+  display: flex;
+  padding: 0;
+  width: 200px;
+  min-height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  background-color: var(--accent-color);
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--hero-button-text-color);
+  letter-spacing: 0.06em;
+  font-family: var(--maine-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  /* padding: 10px 32px;
+  margin: 0px 700px 294px 700px;
+  text-align: center; */
+}

@@ -1,0 +1,58 @@
+* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*Шрифты*/
+  --maine-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+
+  /* == Общее == - использует logo; hover; focus; hero-bottom */
+  --accent-color: #2196f3;
+  --main-color-text: #212121;
+  --second-color-text: #757575;
+  --separatory-line: #ececec;
+  --social-icon: #afb1b8;
+  --icon-link-color: #afb1b8;
+  --close-color: rgba(0, 0, 0, 0.1);
+
+  /* Студия - Hero */
+  --hero-background-color: #c4c4c4;
+  --hero-text-color: #fff;
+  --hero-button-text-color: #ffffff;
+
+  /* Студия - Модальное окно */
+  --backdrop-color: rgba(0, 0, 0, 0.5);
+  --portfolio-button-bgcolor-active: #2196f3;
+
+  /* Студия - Форма модального окна*/
+  --text-lable: #757575;
+  --modal-form-input-border-color: rgba(33, 33, 33, 0.2);
+  --commits-placeholder: rgba(117, 117, 117, 0.5);
+  --input-icon-color: #212121;
+  --input-focus-icon-color: #2196f3;
+  --checkbox-border: #212121;
+  --modal--button-hover: #188ce8;
+
+  /* Студия - наша команда*/
+  --social-ico-acent: #fff;
+
+  /* Подвал */
+  --footer-bgcolor: #2f303a;
+  --logo-text-color: #fff;
+  --footer-text-color: #ffffff;
+  --footer-address-contact: rgba(255, 255, 255, 0.6);
+  --logo-text-color-10p: rgba(255, 255, 255, 0.1);
+  --subscribe-button-color: #2196f3;
+  --subscribe-button-text: #fff;
+  --button-shadow-box: rgba(0, 0, 0, 0.15);
+  --input-border: rgba(255, 255, 255, 0.3);
+  --footer-input-user-text: #fff;
+
+  /* Портфолио - Карточка портфолио */
+  --portfolio-button-text-active-color: #fff;
+  --thumb-text-color: #fff;
+  --thumb-background-color: rgba(33, 150, 243, 0.9);
+}
