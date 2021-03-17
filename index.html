@@ -37,6 +37,12 @@
              </li>
        </ul>
  </nav>
+ <button type="button" class="burger-btn" data-menu-button>
+     <svg class="burger-icon">
+         <use href="./images/icon.svg#menu"></use>
+       </svg>
+ 
+ </button>
 <address class="address">
        <a href="mailto:info@devstudio.com" class="header-email-link">
         <svg class="ico-mail">
@@ -52,20 +58,39 @@
      </a>
 </address> 
 </div>
+ <div class="mobile-menu" data-menu> 
+     <button type="button" class="mobile-close-btn" data-menu-close>
+        <svg class="menu-close">
+            <use href="./images/icon.svg#menu-close"></use>
+        </svg>
+     </button>
+     <ul class="mobile-menu-nav">
+         <li class="mobile-menu-nav-item">
+             <a href="" class="mobile-menu-nav-link">Студия</a>
+         </li>
+         <li class="mobile-menu-nav-item">
+            <a href="" class="mobile-menu-nav-link">Портфолио</a>
+         </li>
+         <li class="mobile-menu-nav-item">
+            <a href="" class="mobile-menu-nav-link">Контакты</a>
+         </li>
+         
+     </ul>
+ </div>
 </header>
 
 <main>
 
 <!-- hero -->
-<section class="hero">
+<!-- <section class="hero">
      <div> 
     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
     <button type="button" class="hero-button" data-open-modal>Заказать услугу</button>
      </div> 
-</section>
+</section> -->
 
 <!-- Особенности -->
-<section class="features">
+<!-- <section class="features">
     <div class="container">
      <ul class="features-list">
         <li class="features-item indent">
@@ -106,10 +131,10 @@
         </li>
     </ul>
 </div>
-</section>
+</section> -->
 
 <!-- Чем мы занимаемся -->
-<section class="whatwedo">
+<!-- <section class="whatwedo">
     <div class="container">
     <h2 class="whatwedo-head">Чем мы занимаемся</h2>
     <ul class="whatwedo-list">
@@ -130,10 +155,10 @@
         </li>
     </ul>
     </div>
-</section>
+</section> -->
 
 <!-- Наша Команда -->
-<section class="ourteam"> 
+<!-- <section class="ourteam"> 
     <div class="container">
      <h2 class="ourteam-head">Наша Команда</h2>
       <ul class="ourteam-list">
@@ -300,16 +325,16 @@
             </li>
       </ul>
     </div>
-     </section>
+     </section> -->
 </main>
 <!-- Постоянные клиенты-->
-<section class="clients">
+<!-- <section class="clients">
     <!--контейнер постоянные клиенты-->
-    <div class="container-clients">
+    <!-- <div class="container-clients"> -->
         <!--оглавления секции-->
-        <h2 class="header-client">Постоянные клиенты</h2>
+        <!-- <h2 class="header-client">Постоянные клиенты</h2> -->
         <!--список иконок постоянных клиентов-->
-        <ul class="list-client-icon">
+        <!-- <ul class="list-client-icon">
             <li class="item-client-icon">
                 <a href="" class="link-icon">
                     <svg class="logo-1">
@@ -359,10 +384,10 @@
             </li>
         </ul>
     </div>
-</section>
+</section> --> 
 
 <!-- Подвал -->
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container flex">
       <div class="contaсt-navigation">
        <a href="index.html"><span class="footer-logo-web">Web</span><span class="footer-logo-studio">Studio</span></a>
@@ -379,10 +404,10 @@
             </li>
         </ul>
        </address>
-    </div>
+    </div> -->
 
     <!--иконки социальных сетей-->
-    <div class="social">
+    <!-- <div class="social">
         <p class="slogan">присоединяйтесь</p>
         <ul class="connect-list">
     
@@ -419,10 +444,10 @@
             </li>
     
         </ul>
-    </div>
+    </div> -->
 
     <!--Подвал - Подпишитесь на рассылку -->
-    <div class="subscribe">
+    <!-- <div class="subscribe">
         <p class="subscribe-text">Подпишитесь на рассылку</p>
         <form action="" class="subscribe-form">
     
@@ -437,18 +462,18 @@
         </form>
     </div>
     </div>
-</footer>
+</footer> -->
 
 <!--модальное окно-->
-<div class="backdrop is-hidden" data-backdrop>
+<!-- <div class="backdrop is-hidden" data-backdrop>
     <div class="modal-port" data-open-modal>
         <div class="round" data-close-modal>
             <svg class="close-icon">
                 <use href="./images/icon.svg#Close"></use>
             </svg>
-        </div>
+        </div> -->
         <!-- Оглавление формы модального окна -->
-        <p class="modal-head">Оставьте свои данные, мы вам перезвоним</p>
+        <!-- <p class="modal-head">Оставьте свои данные, мы вам перезвоним</p>
         <form action="" class="modal-form">
             <div class="form-blok">
                 <label for="name" class="text-lable">Имя</label>
@@ -486,14 +511,14 @@
                         class="contract-link">Условия договора</a>
                 </label>
             </div>
-            <!-- Кнопка отправки форм -->
-            <button type="submit" class="modal-button"><span class="modal-button-text">Отправить</span></button>
+            <!- Кнопка отправки форм -->
+            <!-- <button type="submit" class="modal-button"><span class="modal-button-text">Отправить</span></button>
         </form>
     </div>
-</div>
+</div> --> 
 
 <!--скрипт открытия закрытия окна-->
  <script src="./js/modal.js"></script> 
-
+ <script src="./js/mobile-menu.js"></script>
 </body>
-</html>
+</html> 
